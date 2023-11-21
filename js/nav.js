@@ -14,7 +14,7 @@ function createNavBar(){
     navInput.innerHTML = `
         <div class="flex justify-between items-center ">
             <span class="text-2xl font-[Poppins] cursor-pointer">
-                <a href="homepage.html"><img class="h-10 inline" src="../img/diagnese_logo.png"></a>
+                <a href="index.html"><img class="h-10 inline" src="../img/diagnese_logo.png"></a>
             </span>
 
             <span class="text-4xl cursor-pointer md:hidden block">
