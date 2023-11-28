@@ -76,15 +76,16 @@ function createResultContent (data) {
     </div>
     
     <div class="flex flex-col items-center justify-center">
-            <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
-              <h2 class="text-3xl text-center font-bold mb-16">Rekomendasi Spesialis</h2>
-              <div class="flex flex-wrap justify-center">
-                <div class="w-full md:w-1/2 mb-8">
-                  <h3 class="text-lg">${data.spesialis}</h3>
+            <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8 mb-20">
+              <h2 class="text-3xl text-center font-bold mb-8">Rekomendasi Spesialis</h2>
+              <div class="flex flex-wrap justify-center p-10">
+                <img class="object-scale-down w-fit justify-self-center mb-8" src="../img/${data.spesialis}.png">
+                <div class="w-full md:w-1/2 mb-4">
+                  <h3 class="text-center font-medium text-lg">${data.spesialis}</h3>
                 </div>
               </div>
             </div>
-          </div>
+          </div>
     `;
 
     // Set the accumulated HTML content to the resultHtml container
