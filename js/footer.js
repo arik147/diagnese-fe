@@ -6,7 +6,7 @@ function createFooter(){
     footerInput.innerHTML = `
     <div class="p-10 bg-white shadow text-sky-500 border-t-2">
         <div class="max-w-7xl mx-auto">
-                <img class="h-10 mb-10" src="../img/diagnese_logo.png">
+                <img class="h-10 mb-10" src="./img/diagnese_logo.png">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                     <div class="mb-5">
                         <h4 class="mb-5"><strong>Contact Us</strong></h4>

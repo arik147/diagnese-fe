@@ -6,35 +6,59 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+      body{
+          font-family: sans-serif;
+      }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
 </head>
 <body class="bg-gradient-to-r from-sky-400 via-white via-50% to-sky-400 to-100%">
 
 
     <!-- NAVIGATION BAR -->
-    <nav class="p-5 bg-white shadow-lg md:flex md:items-center sticky top-0 z-[100] md:justify-between" id="navbar">
-        
+    <nav class="bg-white dark:bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-200" id="navbar">
+      
     </nav>
 
+    <section class="bg-center bg-no-repeat bg-[url('./img/about.jpg')] bg-gray-700 bg-blend-multiply">
+      <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+          <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Deteksi penyakit sejak dini adalah kunci untuk pengobatan yang efektif</h1>
+          <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Jangan menunggu sampai sakit untuk memeriksakan diri, deteksi dini dapat menyelamatkan hidup Anda.</p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+              <a href="index.html" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                  Get started
+                  <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                  </svg>
+              </a>
+           
+          </div>
+      </div>
+  </section>
     <!-- ABOUT -->
     <div class="md:mx-32 mx-0 md:py-40 py-20 md:px-10 px-3 bg-white opacity-90">
         
       <div class="flex flex-col items-center justify-center mb-16">
         <div class="w-full max-w-3xl bg-white rounded-lg shadow-lg p-8">
           <h2 class="text-4xl text-center font-bold mb-16">Tentang Kami</h2>
+          <img class="max-w-xs mx-auto" src="./img/indian_doctor.jpg">
           <p>Kami di Diagnese berkomitmen untuk memberikan aksesibilitas tinggi dalam mendapatkan diagnosa penyakit secara akurat dan cepat. Kami percaya bahwa setiap individu berhak mendapatkan informasi kesehatan dengan mudah, tanpa hambatan, untuk meningkatkan kesadaran akan kondisi kesehatan mereka.</p>
         </div>
       </div>
-        
+      <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
       <div class="flex flex-col items-center justify-center mb-16">
             <div class="w-full max-w-3xl bg-white rounded-lg shadow-lg p-8">
               <h2 class="text-4xl text-center font-bold mb-16">Misi Kami</h2>
+              <img class="max-w-md mx-auto mb-6" src="./img/mission.jpg">
               <p>Misi utama kami adalah menyediakan platform yang memudahkan setiap orang untuk memahami kondisi kesehatan mereka melalui layanan diagnosa penyakit yang cepat dan handal. Kami berusaha memberikan informasi kesehatan yang dapat dipercaya dan terkini untuk membantu pengguna membuat keputusan yang cerdas tentang kesehatan mereka.</p>
             </div>
       </div>
-
+      <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
       <div class="flex flex-col items-center justify-center mb-16">
         <div class="w-full max-w-3xl bg-white rounded-lg shadow-lg p-8">
           <h2 class="text-4xl text-center font-bold mb-16">Yang Kami Tawarkan</h2>
+          <img class="max-w-md mx-auto mb-6" src="./img/hero.jpg">
           <ol class="list-decimal">
             <li class="mb-3">Diagnosa Penyakit Cepat dan Akurat: Melalui algoritma canggih kami, kami menyediakan layanan diagnosa penyakit yang dapat membantu pengguna mendapatkan informasi awal tentang kondisi kesehatan mereka.</li>
             <li class="mb-3">Aksesibilitas Tinggi: Kami berkomitmen untuk membuat informasi kesehatan dapat diakses oleh semua orang, tanpa memandang latar belakang atau keterbatasan. Situs web kami dirancang dengan fokus pada aksesibilitas untuk memastikan bahwa setiap pengguna dapat mengakses layanan kami dengan mudah.</li>
@@ -52,13 +76,14 @@
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="../js/nav.js">
+    <script src="./js/nav.js">
 
     </script>
 
-    <script src="../js/footer.js">
+    <script src="./js/footer.js">
 
     </script>
-
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 </body>
 </html>

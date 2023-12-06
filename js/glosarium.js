@@ -56,7 +56,7 @@ function createGlossary(dataGlossary){
         console.log(sortedData[index].prognosis + ' | ' + index);
 
         htmlContent += `
-                    <li class="mb-8">
+                    <li class="max-w space-y-1 list-disc list-inside mb-6">
                         <span class="text-xl">${sortedData[index].prognosis}</span>
                         <p>${sortedData[index].deskripsi}</p>
                     </li>

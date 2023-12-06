@@ -88,7 +88,7 @@ async function fetchDataSymptoms() {
                 htmlContent += `
                     <div id="gejala_${category.toLowerCase().replace(' ', '_')}" class="p-0 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4 pointer-events-none border-x-0 static w-full h-0 opacity-0">
                         ${Object.keys(dataSymptoms[category]).map((symptom) => `
-                            <div class="grid grid-cols-5">
+                            <div class="grid grid-cols-5 p-2">
                                 <input type="checkbox" class="col-span-1 h-4 mt-1" id="checkbox_${category.toLowerCase().replace(' ', '_')}_${symptom.toLowerCase().replace(' ', '_')}">
                                 <label class="col-span-4 cursor-pointer hover:text-sky-600" for="checkbox_${category.toLowerCase().replace(' ', '_')}_${symptom.toLowerCase().replace(' ', '_')}" class="ml-2 cursor-pointer hover:text-sky-600">
                                     ${symptom.replace(/_/g, ' ')}
@@ -99,11 +99,13 @@ async function fetchDataSymptoms() {
                 `;
             });
 
+
             // Create HTML for submit button
             htmlContent += `
                 <button type="submit" class="flex items-center justify-center w-full border-2 rounded-b-lg bg-gray-50 px-5 py-2 cursor-pointer active:bg-gray-100" id="submit">
                     <span class="text-2xl">Submit</span>
                 </button>
+                
             `;
 
             // Set the accumulated HTML content to the formInput container

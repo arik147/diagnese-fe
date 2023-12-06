@@ -45,12 +45,13 @@ function createResultContent (data) {
 
 
     htmlContent += `
-        <h1 class="text-5xl text-center mb-16"><b><i>Hasil Diagnosa</i></b></h1>
-        <h1 class="text-3xl text-center mb-16"><b>${data.prognosis} </b></h1>
+        <h1 class="text-5xl text-center mb-16"><b>Hasil Diagnosa</b></h1>
+        <hr class="h-px my-8 bg-gray-1000 border-0 dark:bg-gray-700">
+        <h1 class="text-3xl text-center mb-16"><b>Penyakit yang anda alami adalah <mark class="px-2 text-white bg-blue-800 rounded dark:bg-blue-500">${data.prognosis}</mark> </b></h1>
 
         <div class="flex justify-center items-center mb-16">
             <div class="w-full max-w-5xl bg-white rounded-lg shadow-lg p-8">
-              <h2 class="text-xl font-bold mb-4">Gejala Umum</h2>
+              <h2 class="text-xl font-bold mb-4">Gejala Yang Dialami</h2>
               <ul class="list-none">
     `;
 
@@ -63,18 +64,19 @@ function createResultContent (data) {
       
         // Create HTML for category div
         htmlContent += `
-          <li class="mb-4">   
+          <li class="max-w-md space-y-1 list-disc list-inside">   
             <span class="text-lg">${formattedGejala}</span>
           </li>
         `;
     });
 
     htmlContent += `
+    <hr class="w-48 h-1 mx-auto my-4 bg-black border-0 rounded md:my-10">
     <div class="mb-16">
         <h1 class="text-3xl text-center mb-16"><b>Deskripsi</b></h1>
         <p>${data.deskripsi}</p>
     </div>
-    
+    <hr class="w-48 h-1 mx-auto my-4 bg-black border-0 rounded md:my-10">
     <div class="flex flex-col items-center justify-center">
             <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8 mb-20">
               <h2 class="text-3xl text-center font-bold mb-8">Rekomendasi Spesialis</h2>

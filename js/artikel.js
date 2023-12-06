@@ -3,7 +3,7 @@ fetchDataArticle();
 async function fetchDataArticle(){
     try {
         // API endpoint
-        //const apiUrl = 'https://newsapi.org/v2/top-headlines?country=id&category=health&apiKey=d3eff7469af34ed6b7a923f3fa99876f';
+        // const apiUrl = 'https://newsapi.org/v2/top-headlines?country=id&category=health&apiKey=d3eff7469af34ed6b7a923f3fa99876f';
         const apiUrl = 'https://newsapi.ai/api/v1/article/getArticles?query=%7B%22%24query%22%3A%7B%22%24and%22%3A%5B%7B%22%24or%22%3A%5B%7B%22conceptUri%22%3A%22http%3A%2F%2Fid.wikipedia.org%2Fwiki%2FKesehatan%22%7D%2C%7B%22conceptUri%22%3A%22http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHealth%22%7D%5D%7D%2C%7B%22categoryUri%22%3A%22news%2FHealth%22%7D%2C%7B%22locationUri%22%3A%22http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FIndonesia%22%7D%2C%7B%22lang%22%3A%22ind%22%7D%5D%7D%2C%22%24filter%22%3A%7B%22forceMaxDataTimeWindow%22%3A%2231%22%7D%7D&resultType=articles&articlesSortBy=rel&includeArticleConcepts=true&includeArticleCategories=true&includeArticleImage=true&apiKey=bf4a1803-7437-45df-9885-345e448c988f';
         // make a GET request using the fetch API
         const response = await fetch(apiUrl);
@@ -35,7 +35,7 @@ async function fetchDataArticle(){
 function createArticleList(dataArticles){
     //console.log(dataArticles);
 
-    var htmlContent = '<h1 class="text-4xl text-center mb-16">Artikel Kesehatan</h1>';
+    var htmlContent = '<h1 class="text-5xl text-center mb-16"><b>Artikel Kesehatan</b></h1> <hr class="h-px my-8 bg-gray-1000 border-0 dark:bg-gray-700">';
 
     // Get the container element
     var articlesInput = document.getElementById('articles');
@@ -58,6 +58,7 @@ function createArticleList(dataArticles){
                     </p>
                 </article>
             </a>
+            <hr class="w-48 h-1 mx-auto my-4 bg-black border-0 rounded md:my-10">
         `;
     });
 

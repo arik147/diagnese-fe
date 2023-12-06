@@ -6,13 +6,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    
 </head>
 <body class="bg-gradient-to-r from-sky-400 via-white via-50% to-sky-400 to-100%">
 
 
     <!-- NAVIGATION BAR -->
 
-    <nav class="p-5 bg-white shadow md:flex md:items-center sticky top-0 z-[100] md:justify-between" id="navbar">
+    <nav class="bg-white dark:bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-200" id="navbar">
         
     </nav>
 
@@ -21,8 +28,13 @@
 
     <!-- FORM -->
     <div class="md:mx-32 mx-0 bg-white opacity-90">
-        <div class="border-b-2 py-10">
-            <h1 class="text-5xl text-center">Gejala</h1>
+        <div class="border-b-2 py-20">
+            <h1 class="text-center mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl ">Form Gejala Penyakit</h1>
+            <p class="text-center mb-6 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 ">Isi form gejala dibawah ini untuk menentukan penyakit yang anda sedang alami</p>
+            <div class="inline-flex items-center justify-center w-full">
+                <hr class="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                <span class="absolute px-3 font-medium  -translate-x-1/2 bg-white left-1/2 ">Form</span>
+            </div>
         </div>
         
         <div class="md:px-10 px-3 md:py-10 py-10 bg-white opacity-100 capitalize" id="predict-form">
@@ -41,14 +53,50 @@
     </footer>
 
     <!--- SCRIPTS -->
-    <script src="../js/nav.js">
+    <script src="./js/nav.js">
         
     </script>
 
-    <script src="../js/gejala_form.js">
+    <script src="./js/gejala_form.js">
 
     </script>
 
-    <script src="../js/footer.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+                // Get all checkboxes in the container
+                const checkboxes = document.querySelectorAll('.grid input[type="checkbox"]');
+                if(checkboxes !== null) {
+                  console.log('Checkbox detected ' + checkboxes);
+                }else{
+                  console.log('No checkbox detected');
+                }
+            
+                // Add event listener to each checkbox
+                checkboxes.forEach(function (checkbox) {
+                  console.log('ummm?');
+                  checkbox.addEventListener('change', function () {
+                    // Get the parent div of the checkbox
+                    const parentDiv = checkbox.closest('.grid');
+                    if(parentDiv !== null) {
+                      console.log('parentDiv detected');
+                    }else{
+                      console.log('No parentDiv detected');
+                    }
+            
+                    // Toggle the 'checked' class based on the checkbox state
+                    if (checkbox.checked) {
+                      console.log('Checked');
+                      parentDiv.className = "grid grid-cols-5 p-2 bg-blue-500";
+                    } else {
+                      parentDiv.className = "grid grid-cols-5 p-2 bg-transparent";
+                    }
+                  });
+                });
+            });
+    </script>
+
+    <script src="./js/footer.js"></script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 </body>
 </html>
